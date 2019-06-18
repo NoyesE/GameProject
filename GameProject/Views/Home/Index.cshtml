@@ -1,19 +1,17 @@
-﻿@{
+﻿@model GameProject.Models.Player
+
+@{
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
+
+
+<div>
     <h1>Build It</h1>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        
-    </div>
-    <div class="col-md-4">
-        
-    </div>
-    <div class="col-md-4">
-        
-    </div>
-</div>
+<sub>Playing as @Model.Name</sub>
+
+<div><input type="button" id="collectWood" value="Collect Wood" /><span id="woodCount"></span></div>
+
+<div><input type="button" id="woodHut" value="Lumberjack Hut" /><span id="hutCount"></span></div>

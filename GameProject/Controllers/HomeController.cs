@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using GameProject.Models;
 
 namespace GameProject.Controllers
 {
@@ -10,7 +11,13 @@ namespace GameProject.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            Player myPlayer = new Player
+            {
+                Name = "Ian",
+                wood = 0,
+                lumberHut = 0
+            };
+            return View(myPlayer);
         }
 
         public ActionResult About()
